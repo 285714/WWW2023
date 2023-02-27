@@ -23,9 +23,11 @@ sample = distribution.sample(100000) # creating a distribution from 100000 sampl
 ## Learning a mixture
 
 There are three methods in [learn.py](learn.py) to learn mixtures:
+
 * The new method `svd_learn_new`
 * The method `svd_learn` described in https://theory.stanford.edu/~sergei/papers/nips16-mcc.pdf
 * Expectation maximization `em_learn`
+
 Each take as input the sample distribution, `n`, and `L`. Note that `svd_learn_new` is able to infer the nubmers of chains if we pass `L=None` as argument. A sample run could look as follows
 ```python
 learned_mixture = svd_learn_new(sample, n, L)
